@@ -9,6 +9,8 @@ README file was updated on May 2024.
 ### Description
 Bicycle-sharing system has been in the rise. This project uses data form **Chicago**, **New York City**, and **Washington**, DC to look at patterns and uncover relevant information for decision making on the usage of rented bikes.
 
+_Data used: January through June 2017._
+
 ### Files used
 * chicago.csv
 * new_york_city.csv
