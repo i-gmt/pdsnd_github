@@ -15,4 +15,4 @@ Bicycle-sharing system has been in the rise. This project uses data form **Chica
 * washington.csv
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+You can find more information about the project [here](https://learn.udacity.com/nanodegrees/nd104/parts/cd0024/lessons/ls1727/concepts/b2d9b97a-1edc-4bcb-bb6e-593034076a11)
