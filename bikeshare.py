@@ -31,15 +31,7 @@ def get_filters():
 
     # Get user input for month (all, january, february, ... , june)
     all_months = input('Would you like to filter by month? Y / N ').lower()
-    while all_months != 'y' and all_months != 'n':
-        all_months = input('Not sure what you mean. Can you choose again please: Y / N ').lower()
-
-    if all_months == 'y':
-        month = input('Choose the month you want to filter by: \nJanuary, February, March, April, May, June\n').lower()
-        while month not in months:
-            month = input('Sorry, I don\'t recognize that month. Please try again\nJanuary, February, March, April, May, June\n').lower()
-    elif all_months == 'n':
-        month = 'all'
+    month = get_month(all_months)
 
     # Get user input for day of week (all, monday, tuesday, ... sunday)
     all_days = input("Would you like to filter by a specific day? Y / N ").lower()
@@ -55,6 +47,18 @@ def get_filters():
 
     print('-'*40)
     return city, month, day
+
+def get_month(all_months):
+    while all_months != 'y' and all_months != 'n':
+        all_months = input('Not sure what you mean. Can you choose again please: Y / N ').lower()
+
+    if all_months == 'y':
+        month = input('Choose the month you want to filter by: \nJanuary, February, March, April, May, June\n').lower()
+        while month not in months:
+            month = input('Sorry, I don\'t recognize that month. Please try again\nJanuary, February, March, April, May, June\n').lower()
+    elif all_months == 'n':
+        month = 'all'
+    return month
 
 
 def load_data(city, month, day):
