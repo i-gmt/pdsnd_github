@@ -34,6 +34,12 @@ def get_filters():
     month = get_month(all_months)
 
     # Get user input for day of week (all, monday, tuesday, ... sunday)
+    day = get_day()
+
+    print('-'*40)
+    return city, month, day
+
+def get_day():
     all_days = input("Would you like to filter by a specific day? Y / N ").lower()
     while all_days != 'y' and all_days != 'n':
         all_days = input('Not sure what you mean. Can you choose again please: Y / N ').lower()
@@ -44,9 +50,7 @@ def get_filters():
             day = input('Sorry, I don\'t recognize that day. Please try again\nMonday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday\n').lower()
     elif all_days == 'n':
         day = 'all'
-
-    print('-'*40)
-    return city, month, day
+    return day
 
 def get_month(all_months):
     while all_months != 'y' and all_months != 'n':
